@@ -28,6 +28,11 @@ app.get('/restaurants', function(req, res){
     
 });
 
+app.get('/restaurants/:id', function (req, res){
+    const restaurantId = req.params.id;
+    res.render('restaurant-detail', {rid: restaurantId});
+});
+
 app.get('/recommend', function(req, res){
     res.render('recommend');
 });
@@ -56,4 +61,3 @@ app.get('/about', function(req, res){
 });
 app.listen(3000);
 
-//vamos en aside del video 365, basicamente vamos a agregar XXX//
